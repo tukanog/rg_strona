@@ -42,26 +42,29 @@ nav {
         display: flex;
         list-style: none;
         padding: 0;
+        align-items: center;
 
-        
-
-        /* a { 
+        a { 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
             text-decoration: none; 
             color: var(--color-medium-turuoise);
             flex: 1;
         }
 
-        li {
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        li {     
+            height: 100%;  
             text-align: center;
+            justify-content: center;
+            flex: 1;
         }
 
         li:hover {
             background-color: var(--color-blue-violet);
-        } */
+        }
     }
 }
 

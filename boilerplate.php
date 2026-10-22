@@ -14,21 +14,11 @@
     </header>
     <nav>
         <ul>
-            <a href="index.html">
-                <li>Strona główna</li>
-            </a>
-            <a href="onas.html">
-                <li>O nas</li>
-            </a>
-            <a href="kontakt.html">
-                <li>Kontakt</li>
-            </a>
-            <a href="galeria.html">
-                <li>Galeria</li>
-            </a>
-            <a href="opinie.html">
-                <li>Opinie</li>
-            </a>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="index.html">O nas</a></li>
+            <li><a href="index.html">Kontakt</a></li>
+            <li><a href="index.html">Galeria</a></li>
+            <li><a href="index.html">Opinie</a></li>
         </ul>
     </nav>
 
@@ -43,3 +33,7 @@
     </footer>
 </body>
 </html>
+
+<!-- 
+    Chyba sie udalo nwm bedac szczerym..
+-->

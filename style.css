@@ -4,6 +4,10 @@
     font-size: x-large;
 }
 
+body {
+    margin: 0
+}
+
 header {
     text-align: center;
     display: grid;
@@ -18,9 +22,24 @@ header {
     
 }
 
+nav {
+    background-color: rgb(2, 2, 97);
+    padding: 10px 0 10px 
+}
+
 nav > ul {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
-    padding: 0
+    padding: 0;
+    a { 
+        text-decoration: none; 
+        color: white
+    }
+}
+
+footer {
+    text-align: center;
+    background-color: rgb(35, 1, 66);
+    padding: 10px 0 10px
 }

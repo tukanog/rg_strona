@@ -1,5 +1,4 @@
 :root {
-    color: rgb(255, 210, 188);
     font-size: x-large;
     line-height: 1.4;
 
@@ -14,6 +13,7 @@
 body {
     margin: 0;
     background-color: var(--color-deep-sea-green);
+    color: var(--color-medium-turuoise);
 }
 
 header {
@@ -44,7 +44,7 @@ nav {
 
         a { 
             text-decoration: none; 
-            color: white;
+            color: var(--color-medium-turuoise);
             flex: 1;
         }
 

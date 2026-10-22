@@ -14,11 +14,21 @@
     </header>
     <nav>
         <ul>
-            <li><a href="index.html">Strona główna</a></li>
-            <li><a href="onas.html">O nas</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-            <li><a href="galeria.html">Galeria</a></li>
-            <li><a href="opinie.html">Opinie</a></li>
+            <a href="index.html">
+                <li>Strona główna</li>
+            </a>
+            <a href="onas.html">
+                <li>O nas</li>
+            </a>
+            <a href="kontakt.html">
+                <li>Kontakt</li>
+            </a>
+            <a href="galeria.html">
+                <li>Galeria</li>
+            </a>
+            <a href="opinie.html">
+                <li>Opinie</li>
+            </a>
         </ul>
     </nav>
 

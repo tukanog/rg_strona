@@ -9,6 +9,10 @@
     --color-dark-magenta: #480930;
 }
 
+body {
+    margin: 0
+}
+
 header {
     text-align: center;
     display: grid;
@@ -20,13 +24,27 @@ header {
         grid-area: logo;
     }
     > h1 { grid-area: h1; }
+    
 }
+
 nav {
-    > ul {
-        display: flex;
-        list-style: none;
-        width: 100%;
-        justify-content: space-evenly;
-        padding: 0;
+    background-color: rgb(2, 2, 97);
+    padding: 10px 0 10px 
+}
+
+nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    a { 
+        text-decoration: none; 
+        color: white
     }
+}
+
+footer {
+    text-align: center;
+    background-color: rgb(35, 1, 66);
+    padding: 10px 0 10px
 }

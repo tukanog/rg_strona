@@ -21,5 +21,15 @@
             <li><a href="opinie.html">Opinie</a></li>
         </ul>
     </nav>
+
+    <main>
+
+    </main>
+
+    <footer>
+        <p>
+            Stronę przygotowali: <strong>Adam Mikołajczyk</strong>, <strong>Paweł Kowal</strong>, <strong>Martyna Szczur</strong>, <strong>Marcel Kotecki</strong> z <strong>5ti2</strong>
+        </p>
+    </footer>
 </body>
 </html>

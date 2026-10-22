@@ -8,6 +8,17 @@
     <title>Docuent</title>
 </head>
 <body>
-    <p>test</p>
+    <header>
+        <h1>Strona stronowa</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Strona główna</a></li>
+            <li><a href="onas.html">O nas</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="opinie.html">Opinie</a></li>
+        </ul>
+    </nav>
 </body>
 </html>

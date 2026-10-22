@@ -15,4 +15,12 @@ header {
         grid-area: logo;
     }
     > h1 { grid-area: h1; }
+    
+}
+
+nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0
 }

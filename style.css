@@ -1,5 +1,4 @@
 :root {
-    background-color: rgb(37, 35, 35);
     color: rgb(255, 210, 188);
     font-size: x-large;
 
@@ -7,10 +6,13 @@
     --color-deep-sea-green: #163121;
     --color-blue-violet: #5D3CAA;
     --color-dark-magenta: #480930;
+    --color-medium-turuoise: #59B9CF;
+    --color-deadly-depths: #0B1941;
 }
 
 body {
-    margin: 0
+    margin: 0;
+    background-color: var(--color-deep-sea-green);
 }
 
 header {
@@ -27,21 +29,37 @@ header {
     
 }
 
-nav {
-    background-color: rgb(2, 2, 97);
-    padding: 10px 0 10px 
-}
 
-nav > ul {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    padding: 0;
-    a { 
-        text-decoration: none; 
-        color: white
+nav { 
+    padding: 10px 0 10px;
+
+    > ul {
+        background-color: var(--color-dark-magenta);
+        margin: 0;
+        height: 120px;
+        display: flex;
+        list-style: none;
+        padding: 0;
+
+        a { 
+            text-decoration: none; 
+            color: white
+        }
+
+        > li {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+        }
+
+        > li:hover {
+            background-color: var(--color-blue-violet);
+        }
     }
 }
+
 
 footer {
     text-align: center;

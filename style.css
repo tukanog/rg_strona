@@ -2,6 +2,7 @@
     background-color: rgb(37, 35, 35);
     color: rgb(255, 210, 188);
     font-size: x-large;
+    line-height: 1.4;
 
     --color-deep-dark-green: #095340;
     --color-deep-sea-green: #163121;
@@ -9,9 +10,7 @@
     --color-dark-magenta: #480930;
 }
 
-body {
-    margin: 0
-}
+body { margin: 0; }
 
 header {
     text-align: center;

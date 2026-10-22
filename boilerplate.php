@@ -33,7 +33,3 @@
     </footer>
 </body>
 </html>
-
-<!-- 
-    Chyba sie udalo nwm bedac szczerym..
--->

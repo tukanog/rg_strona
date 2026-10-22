@@ -29,17 +29,16 @@ header {
 
 nav {
     background-color: rgb(2, 2, 97);
-    padding: 10px 0 10px 
-}
-
-nav > ul {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    padding: 0;
-    a { 
-        text-decoration: none; 
-        color: white
+    padding: 10px 0 10px ;
+    > ul {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        padding: 0;
+        a { 
+            text-decoration: none; 
+            color: white
+        }
     }
 }
 

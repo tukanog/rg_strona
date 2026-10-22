@@ -9,6 +9,7 @@
 </head>
 <body>
     <header>
+        <img src="assets/img/logo.svg" alt="Logo strony">
         <h1>Strona stronowa</h1>
     </header>
     <nav>

@@ -2,6 +2,11 @@
     background-color: rgb(37, 35, 35);
     color: rgb(255, 210, 188);
     font-size: x-large;
+
+    --color-deep-dark-green: #095340;
+    --color-deep-sea-green: #163121;
+    --color-blue-violet: #5D3CAA;
+    --color-dark-magenta: #480930;
 }
 
 header {
@@ -15,4 +20,13 @@ header {
         grid-area: logo;
     }
     > h1 { grid-area: h1; }
+}
+nav {
+    > ul {
+        display: flex;
+        list-style: none;
+        width: 100%;
+        justify-content: space-evenly;
+        padding: 0;
+    }
 }

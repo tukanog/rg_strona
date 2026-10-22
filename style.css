@@ -1,6 +1,7 @@
 :root {
     color: rgb(255, 210, 188);
     font-size: x-large;
+    line-height: 1.4;
 
     --color-deep-dark-green: #095340;
     --color-deep-sea-green: #163121;

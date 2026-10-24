@@ -11,7 +11,7 @@
     <header>
         <img src="assets/img/logo.svg" alt="Logo strony">
         <h1>Kino NOVA</h1>
-        <form action="index.php" method="post" id='logowanie'>
+        <form action="boilerplate.php" method="post" id='logowanie'> <!-- action do zmiany -->
             <input type="hidden" name="nazwa_uzytkownika" id="nazwa_uzytkownika">
             <input type="hidden" name="haslo" id="haslo">
             <button onclick='PobierzDane()'>Zaloguj</button>
@@ -19,42 +19,12 @@
     </header>
     <nav>
         <ul>
-            <li><a href="index.php">Strona główna</a>
-                <div class="nav_dropdown">
-                    <ul>
-                        <li>Miasta</li>
-                        <li>Dostępne sale</li>
-                        <li>Historia kina NOVA</li>
-                        <li>Coś dla filmowców</li>
-                    </ul>
-                </div>
-            </li>
-            <li><a href="repertuar.php">Repertuar</a>
-                <div class="nav_dropdown">
-                    <ul>
-                        <li>Wszystkie filmy</li>
-                        <li>Tylko u nas</li>
-                        <li>Kino strachu</li>
-                        <li>Kino 7D</li>
-                    </ul>
-                </div>
-            </li>
-            <li><a href="premiery.php">Premiery</a>
-                <div class="nav_dropdown">
-                    <ul>
-                        <li>Wszystkie premiery</li>
-                        <li>Nadchodzące</li>
-                        <li>Specjalne</li>
-                    </ul>
-                </div>
-            </li>
+            <li><a href="index.php">Repertuar</a></li>
             <li><a href="rezerwacje.php">Pomoc</a>
                 <div class="nav_dropdown">
                     <ul>
                         <li>Cennik</li>
                         <li>Kontakt</li>
-                        <li>Dzieci</li>
-                        <li>Grupy</li>
                         <li>Pozostałe FAQ</li>
                     </ul>
                 </div>

@@ -11,6 +11,11 @@
     <header>
         <img src="assets/img/logo.svg" alt="Logo strony">
         <h1>Kino NOVA</h1>
+        <form action="boilerplate.php" method="post" id='logowanie'> <!-- action do zmiany -->
+            <input type="hidden" name="nazwa_uzytkownika" id="nazwa_uzytkownika">
+            <input type="hidden" name="haslo" id="haslo">
+            <button onclick='PobierzDane()'>Zaloguj</button>
+        </form>
     </header>
     <nav>
         <ul id="logbar">

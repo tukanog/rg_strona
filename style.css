@@ -3,12 +3,7 @@
     line-height: 1.4;
     font-family: 'Geist', sans-serif;
 
-    --color-deep-dark-green: #095340;
-    --color-deep-sea-green: #163121;
-    --color-blue-violet: #5D3CAA;
-    --color-dark-magenta: #480930;
-    --color-bright-snow: #f8f9fa;
-    --color-deadly-depths: #0B1941;
+    --color-bright-snow: #f8f9fa;;
     --color-platinum: #e9ecef;
     --color-alabaster-gray: #dee2e6;
     --color-pale-slate: #ced4da;
@@ -21,7 +16,7 @@
 body {
     margin: 0;
     padding: 260px 0 0 0;
-    background-color: var(--color-gunmetal);
+    background-color: var(--color-iron-gray);
     color: var(--color-bright-snow);
 
     main {
@@ -58,7 +53,7 @@ nav {
     position-area: bottom center ;
     z-index: 1000;
     width: 100%;
-    background-color: var(--color-dark-magenta);
+    background-color: var(--color-gunmetal);
     > ul {
         margin: 0 15% 0 15%;
         height: 60px;
@@ -89,7 +84,7 @@ nav {
         }
 
         > li:hover {
-            background-color: var(--color-blue-violet);
+            background-color: var(--color-iron-gray);
             > .nav_dropdown {
                 visibility: unset;
             }
@@ -97,8 +92,8 @@ nav {
         }
 
         .nav_dropdown {
-            border-top: 1px solid black;
-            background-color: #5D3CAA;
+            border-top: 1px solid var(--color-shadow-gray);
+            background-color: var(--color-iron-gray);
             padding: 0 0 15px 0;
             > ul {
                 list-style: none;

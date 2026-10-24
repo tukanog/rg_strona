@@ -88,7 +88,7 @@
         </p>
     </footer>
     <?php 
-    $baza_danych ->close()
+        $baza_danych->close()
     ?>
 </body>
 </html>

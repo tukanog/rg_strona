@@ -17,7 +17,7 @@
 body {
     margin: 0;
     padding: 260px 0 0 0;
-    background-color: var(--color-dark-slate-gray);
+    background-color: var(--color-iron-gray);
     color: var(--color-bright-snow);
 
     main {
@@ -33,18 +33,12 @@ header {
     grid-template-areas: "logo h1 .";
     align-items: center;
     background-color: var(--color-shadow-gray);
-    anchor-name: --header;
     > img {
         width: 200px;
         grid-area: logo;
     }
     > h1 { grid-area: h1; }
-    position: fixed;
     width: 100%;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
 }
 
 
@@ -52,7 +46,6 @@ nav {
     position: fixed;
     position-anchor: --header;
     position-area: bottom center ;
-    display: flex;
     z-index: 1000;
     width: 70%;
     background-color: var(--color-gunmetal);

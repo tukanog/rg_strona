@@ -44,10 +44,25 @@
                 }
             ?>
         </ul>
+<<<<<<< Updated upstream
+=======
+        <ul id="navbar">
+            <li><a href="index.php">Repertuar</a></li>
+            <li><a href="index.php">Aktualności</a></li>
+            <li><a href="rezerwacje.php">Pomoc  &#129095;</a>
+                <div class="nav_dropdown">
+                    <ul>
+                        <li>Cennik</li>
+                        <li>Kontakt</li>
+                        <li>FAQ</li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+>>>>>>> Stashed changes
     </nav>
 
     <main>
-
     </main>
 
     <footer>

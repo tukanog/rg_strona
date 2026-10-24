@@ -32,16 +32,13 @@
         </div>
     </header>
     <nav>
-        <ul>
-            <li><a href="index.php">Repertuar</a></li>
-            <li><a href="rezerwacje.php">Pomoc</a>
-                <div class="nav_dropdown">
-                    <ul>
-                        <li>Cennik</li>
-                        <li>Kontakt</li>
-                        <li>Pozostałe FAQ</li>
-                    </ul>
-                </div>
+        <ul id="logbar">
+            <li>
+                <form action="boilerplate.php" method="post" id='logowanie'> <!-- action do zmiany -->
+                    <input type="hidden" name="nazwa_uzytkownika" id="nazwa_uzytkownika">
+                    <input type="hidden" name="haslo" id="haslo">
+                    <button id="button_login" onclick='PobierzDane()'>Zaloguj</button>
+                </form>
             </li>
             <?php 
                 if(isset($_POST['nazwa_uzytkownika'])){
@@ -57,6 +54,19 @@
                     }
                 }
             ?>
+        </ul>
+        <ul id="navbar">
+            <li><a href="index.php">Repertuar</a></li>
+            <li><a href="index.php">Aktualności</a></li>
+            <li><a href="rezerwacje.php">Pomoc  &#129095;</a>
+                <div class="nav_dropdown">
+                    <ul>
+                        <li>Cennik</li>
+                        <li>Kontakt</li>
+                        <li>Pozostałe FAQ</li>
+                    </ul>
+                </div>
+            </li>
         </ul>
     </nav>
 

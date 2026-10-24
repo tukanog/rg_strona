@@ -5,20 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
-    <title>Docuent</title>
+    <title>Kino NOVA</title>
 </head>
 <body>
     <header>
         <img src="assets/img/logo.svg" alt="Logo strony">
-        <h1>Strona stronowa</h1>
+        <h1>Kino NOVA</h1>
+        <form action="index.php" method="post" id='logowanie'>
+            <input type="hidden" name="nazwa_uzytkownika" id="nazwa_uzytkownika">
+            <input type="hidden" name="haslo" id="haslo">
+            <button onclick='PobierzDane()'>Zaloguj</button>
+        </form>
     </header>
     <nav>
         <ul>
-            <li><a href="index.html">Strona główna</a></li>
-            <li><a href="index.html">O nas</a></li>
-            <li><a href="index.html">Kontakt</a></li>
-            <li><a href="index.html">Galeria</a></li>
-            <li><a href="index.html">Opinie</a></li>
+            <li><a href="index.php">Strona główna</a></li>
+            <li><a href="repertuar.php">Repertuar</a></li>
+            <li><a href="premiery.php">Premiery</a></li>
+            <li><a href="rezerwacje.php">Rezerwacje</a></li>
+            <?php 
+                if(isset($_POST['nazwa_uzytkownika'])){
+                    $nazwa_uzytkownik=$_POST['nazwa_uzytkownika'];
+                    $haslo=$_POST['haslo'];
+                    $pobierz_uzytkownika='SELECT * FROM uzytkownicy WHERE nazwa LIKE "'.$nazwa_uzytkownik.'" AND haslo LIKE "'.$haslo.'"';
+                    $baza_danych= new mysqli('127.0.0.1', 'root', '', 'kino_nova');
+                    $sprawdz_uzytkownika=$baza_danych->query($pobierz_uzytkownika);
+                    if($sprawdz_uzytkownika){
+                    ?>
+                    <li><a href="panel.php" id='panel_zarzadzania'>Panel zarządzania</a></li>
+                    <?php
+                    }
+                }
+            ?>
         </ul>
     </nav>
 
@@ -33,5 +51,8 @@
             </small>    
         </p>
     </footer>
+    <?php 
+    $baza_danych ->close()
+    ?>
 </body>
 </html>

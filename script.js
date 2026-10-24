@@ -12,30 +12,34 @@ function PobierzDane(){
 
 const LINK = qs('link')
 const SPAN_MOTYW = qs('#motyw')
+const LOGO = qs('#logo')
 
 if (localStorage.getItem('motyw') === 'light') {
     LINK.href = 'light.css'
     SPAN_MOTYW.innerHTML = 'Przełącz motyw (na ciemny)'
+    LOGO.src = "assets/img/logo_black.svg"
 }
 
 function przelaczMotyw() {
     let stan = qs('#przycisk_motywu').checked
 
-
     if (stan) {
         LINK.href = 'light.css'
         localStorage.setItem('motyw', 'light')
         SPAN_MOTYW.innerHTML = 'Przełącz motyw (na ciemny)'
+        LOGO.src = "assets/img/logo_black.svg"
     }
     else {
         LINK.href = 'dark.css'
         localStorage.setItem('motyw', 'dark')
         SPAN_MOTYW.innerHTML = 'Przełącz motyw (na jasny)'
+        LOGO.src = "assets/img/logo_white.svg"
     }
 }
 
 const SPAN_CZCIONKA = qs('#wartosc_czcionka')
 const CZCIONKA = qs('#czcionka')
+
 
 CZCIONKA.onchange = function() {
     document.body.style.fontSize = CZCIONKA.value + '%'

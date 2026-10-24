@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <img src="assets/img/logo.svg" alt="Logo strony">
+        <img src="assets/img/logo.svg" id="logo" alt="Logo strony">
         <h1>Kino NOVA</h1>
         <div>
             <label>

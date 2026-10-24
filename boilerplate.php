@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dark.css">
     <script defer src="script.js"></script>
     <title>Kino NOVA</title>
 </head>
@@ -11,11 +11,16 @@
     <header>
         <img src="assets/img/logo.svg" alt="Logo strony">
         <h1>Kino NOVA</h1>
-        <form action="boilerplate.php" method="post" id='logowanie'> <!-- action do zmiany -->
-            <input type="hidden" name="nazwa_uzytkownika" id="nazwa_uzytkownika">
-            <input type="hidden" name="haslo" id="haslo">
-            <button onclick='PobierzDane()'>Zaloguj</button>
-        </form>
+        <div>
+            <label>
+                <span id="motyw">Przełącz motyw (na jasny)</span><input type="checkbox" id="przycisk_motywu" onchange="przelaczMotyw()">
+            </label>
+            <form action="index.php" method="post" id='logowanie'>
+                <input type="hidden" name="nazwa_uzytkownika" id="nazwa_uzytkownika">
+                <input type="hidden" name="haslo" id="haslo">
+                <button onclick='PobierzDane()'>Zaloguj</button>
+            </form>
+        </div>
     </header>
     <nav>
         <ul>

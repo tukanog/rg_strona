@@ -11,11 +11,11 @@ function PobierzDane(){
 }
 
 const LINK = qs('link')
-const SPANMOTYW = qs('#motyw')
+const SPAN_MOTYW = qs('#motyw')
 
 if (localStorage.getItem('motyw') === 'light') {
     LINK.href = 'light.css'
-    SPANMOTYW.innerHTML = 'Przełącz motyw (na ciemny)'
+    SPAN_MOTYW.innerHTML = 'Przełącz motyw (na ciemny)'
 }
 
 function przelaczMotyw() {
@@ -25,11 +25,19 @@ function przelaczMotyw() {
     if (stan) {
         LINK.href = 'light.css'
         localStorage.setItem('motyw', 'light')
-        SPANMOTYW.innerHTML = 'Przełącz motyw (na ciemny)'
+        SPAN_MOTYW.innerHTML = 'Przełącz motyw (na ciemny)'
     }
     else {
         LINK.href = 'dark.css'
         localStorage.setItem('motyw', 'dark')
-        SPANMOTYW.innerHTML = 'Przełącz motyw (na jasny)'
+        SPAN_MOTYW.innerHTML = 'Przełącz motyw (na jasny)'
     }
+}
+
+const SPAN_CZCIONKA = qs('#wartosc_czcionka')
+const CZCIONKA = qs('#czcionka')
+
+CZCIONKA.onchange = function() {
+    document.body.style.fontSize = CZCIONKA.value + '%'
+    SPAN_CZCIONKA.innerHTML = CZCIONKA.value + '%'
 }

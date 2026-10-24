@@ -13,7 +13,8 @@
         <h1>Kino NOVA</h1>
         <div>
             <label>
-                <span id="motyw">Przełącz motyw (na jasny)</span><input type="checkbox" id="przycisk_motywu" onchange="przelaczMotyw()">
+                <span id="motyw">Przełącz motyw (na jasny)</span>
+                <input type="checkbox" id="przycisk_motywu" onchange="przelaczMotyw()">
             </label>
 
             <br>

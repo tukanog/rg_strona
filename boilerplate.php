@@ -15,7 +15,7 @@
             <label>
                 <span id="motyw">Przełącz motyw (na jasny)</span><input type="checkbox" id="przycisk_motywu" onchange="przelaczMotyw()">
             </label>
-            <form action="index.php" method="post" id='logowanie'>
+            <form action="boilerplate.php" method="post" id='logowanie'> <!-- action=boilerplate na potrzeby testów, w praktyce do zmiany na index -->
                 <input type="hidden" name="nazwa_uzytkownika" id="nazwa_uzytkownika">
                 <input type="hidden" name="haslo" id="haslo">
                 <button onclick='PobierzDane()'>Zaloguj</button>

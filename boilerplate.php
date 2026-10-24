@@ -19,10 +19,46 @@
     </header>
     <nav>
         <ul>
-            <li><a href="index.php">Strona główna</a></li>
-            <li><a href="repertuar.php">Repertuar</a></li>
-            <li><a href="premiery.php">Premiery</a></li>
-            <li><a href="rezerwacje.php">Rezerwacje</a></li>
+            <li><a href="index.php">Strona główna</a>
+                <div class="nav_dropdown">
+                    <ul>
+                        <li>Miasta</li>
+                        <li>Dostępne sale</li>
+                        <li>Historia kina NOVA</li>
+                        <li>Coś dla filmowców</li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="repertuar.php">Repertuar</a>
+                <div class="nav_dropdown">
+                    <ul>
+                        <li>Wszystkie filmy</li>
+                        <li>Tylko u nas</li>
+                        <li>Kino strachu</li>
+                        <li>Kino 7D</li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="premiery.php">Premiery</a>
+                <div class="nav_dropdown">
+                    <ul>
+                        <li>Wszystkie premiery</li>
+                        <li>Nadchodzące</li>
+                        <li>Specjalne</li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="rezerwacje.php">Pomoc</a>
+                <div class="nav_dropdown">
+                    <ul>
+                        <li>Cennik</li>
+                        <li>Kontakt</li>
+                        <li>Dzieci</li>
+                        <li>Grupy</li>
+                        <li>Pozostałe FAQ</li>
+                    </ul>
+                </div>
+            </li>
             <?php 
                 if(isset($_POST['nazwa_uzytkownika'])){
                     $nazwa_uzytkownik=$_POST['nazwa_uzytkownika'];

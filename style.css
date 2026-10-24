@@ -7,15 +7,22 @@
     --color-deep-sea-green: #163121;
     --color-blue-violet: #5D3CAA;
     --color-dark-magenta: #480930;
-    --color-medium-turuoise: #59B9CF;
+    --color-bright-snow: #f8f9fa;
     --color-deadly-depths: #0B1941;
+    --color-platinum: #e9ecef;
+    --color-alabaster-gray: #dee2e6;
+    --color-pale-slate: #ced4da;
+    --color-pale-slate-gray: #adb5bd;
+    --color-iron-gray: #495057;
+    --color-gunmetal: #343a40;
+    --color-shadow-gray: #212529;
 }
 
 body {
     margin: 0;
     padding: 260px 0 0 0;
-    background-color: var(--color-deep-sea-green);
-    color: var(--color-medium-turuoise);
+    background-color: var(--color-gunmetal);
+    color: var(--color-bright-snow);
 
     main {
         padding: 0 15% 0 15%;
@@ -29,7 +36,7 @@ header {
     grid-template-columns: 20% 60% 20%;
     grid-template-areas: "logo h1 .";
     align-items: center;
-    background-color: var(--color-deep-dark-green);
+    background-color: var(--color-shadow-gray);
     anchor-name: --header;
     > img {
         width: 200px;
@@ -67,19 +74,40 @@ nav {
             width: 100%;
             height: 100%;
             text-decoration: none; 
-            color: var(--color-medium-turuoise);
+            color: var(--color-bright-snow);
             flex: 1;
         }
 
-        li {     
+        > li {     
             height: 100%;  
             text-align: center;
             justify-content: center;
             flex: 1;
+            > .nav_dropdown {
+                visibility: hidden;
+            }
         }
 
-        li:hover {
+        > li:hover {
             background-color: var(--color-blue-violet);
+            > .nav_dropdown {
+                visibility: unset;
+            }
+
+        }
+
+        .nav_dropdown {
+            border-top: 1px solid black;
+            background-color: #5D3CAA;
+            padding: 0 0 15px 0;
+            > ul {
+                list-style: none;
+                padding: 15px 0 0 0;
+
+                > li {
+                    margin: 10px 0 10px 0 ;
+                }
+            }
         }
     }
 }
@@ -87,7 +115,7 @@ nav {
 
 footer {
     text-align: center;
-    background-color: var(--color-deep-dark-green);
+    background-color: var(--color-shadow-gray);
     padding: 10px 0 10px
 }
 

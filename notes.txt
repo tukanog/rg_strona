@@ -1,2 +1,7 @@
 Ile podstron robimy
 czy nam sie chce?
+nie xd
+
+
+
+Z jakiegoś powodu nie działa zmiana logo na light.css

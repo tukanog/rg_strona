@@ -9,27 +9,21 @@
 </head>
 <body>
     <header>
-        <img src="assets/img/logo.svg" id="logo" alt="Logo strony">
-        <h1>Kino NOVA</h1>
-        <div>
+        <div id="logo">
+            <img src="assets/img/logo_white.svg" id="logo" alt="Logo strony">
+            <h1>Kino NOVA</h1>
+        </div>
+        <div id="accessibility">
             <label>
                 <span id="motyw">Przełącz motyw (na jasny)</span>
                 <input type="checkbox" id="przycisk_motywu" onchange="przelaczMotyw()">
             </label>
-
-            <br>
 
             <label>
                 Zmień rozmiar czcionki:
                 <input type="range" id="czcionka" min="100" max="200" step="25" value="100">
                 <span id="wartosc_czcionka">100%</span>   
             </label>
-
-            <form action="boilerplate.php" method="post" id='logowanie'> <!-- action=boilerplate na potrzeby testów, w praktyce do zmiany na index -->
-                <input type="hidden" name="nazwa_uzytkownika" id="nazwa_uzytkownika">
-                <input type="hidden" name="haslo" id="haslo">
-                <button onclick='PobierzDane()'>Zaloguj</button>
-            </form>
         </div>
     </header>
     <nav>

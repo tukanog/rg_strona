@@ -21,24 +21,26 @@ body {
     color: var(--color-1);
 
     main {
-        padding: 0 15% 0 15%;
+        padding: 50px 15% 50px 15%;
     }
 }
 
 
 header {
-    text-align: center;
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-    grid-template-areas: "logo h1 .";
-    align-items: center;
-    background-color: var(--color-8);
-    > img {
-        width: 200px;
-        grid-area: logo;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15% 20px 15%;
+    #logo {
+        display: flex;
+        align-items: center;
+        img { width: 150px; margin-right: 20px }
     }
-    > h1 { grid-area: h1; }
-    width: 100%;
+    #accessibility {
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column
+    }
 }
 
 

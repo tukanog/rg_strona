@@ -13,6 +13,8 @@
     --color-8: #FFFFFF;
 }
 
+#przycisk_motywu { display: none }
+
 body {
     margin: 0;
     padding: 260px 0 0 0;

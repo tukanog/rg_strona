@@ -19,10 +19,6 @@ body {
     margin: 0;
     background-color: var(--color-5);
     color: var(--color-1);
-
-    main {
-        padding: 0 15% 0 15%;
-    }
 }
 
 
@@ -151,6 +147,7 @@ nav {
 }
 
 main {
+    padding: 0 15% 0 15%;
     > div.film {
         margin: 30px 0 30px 0;
         > a {

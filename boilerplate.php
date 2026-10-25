@@ -15,10 +15,10 @@
     <header>
         <div id="logo">
             <img src="assets/img/logo_white.svg" id="logo" alt="Logo strony">
-            <label>
+            <div>
                 <h1>Kino NOVA</h1>
                 <p>Twoje najlepsze doświadczenia z filmów</p>
-            </label>
+            </div>
         </div>
         <div id="accessibility">
             <label>

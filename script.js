@@ -12,7 +12,7 @@ function PobierzDane(){
 
 const LINK = qs('link')
 const SPAN_MOTYW = qs('#motyw')
-const LOGO = qs('#logo')
+const LOGO = qs('#logo_img')
 
 if (localStorage.getItem('motyw') === 'light') {
     LINK.href = 'light.css'

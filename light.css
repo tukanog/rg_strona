@@ -15,18 +15,20 @@
 
 #przycisk_motywu { display: none }
 
+#przycisk_motywu { display: none }
+
 body {
     margin: 0;
-    background-color: var(--color-6);
+    background-color: var(--color-5);
     color: var(--color-1);
 }
-
 
 header {
     display: flex;
     justify-content: space-between;
     padding: 20px 15% 20px 15%;
     background-color: var(--color-8);
+
     #logo {
         display: flex;
         align-items: center;
@@ -34,6 +36,7 @@ header {
         h1 { margin: 10px 0 5px 0; }
         p { margin: 5px 0 5px 0; }
     }
+
     #accessibility {
         text-align: center;
         justify-content: center;
@@ -41,7 +44,6 @@ header {
         flex-direction: column
     }
 }
-
 
 nav {
     display: flex;
@@ -71,7 +73,6 @@ nav {
         list-style: none;
         display: flex;
         margin: 0;
-        
 
         > li {
             height: 100%;
@@ -85,7 +86,7 @@ nav {
         > li:hover {
             background-color: var(--color-6);
         }
-        
+
         #button_login {
             background-color: unset;
             height: 100%;
@@ -98,18 +99,15 @@ nav {
             line-height: 1.4;
             color: var(--color-1);
         }
-        
     }
+
     > ul#navbar {
         margin: 0;
         height: 60px;
         display: flex;
-        
         list-style: none;
         padding: 0;
         align-items: center;
-
-
 
         > li {     
             height: 100%;
@@ -117,6 +115,7 @@ nav {
             text-align: center;
             justify-content: center;
             flex: 1;
+
             > .nav_dropdown {
                 visibility: hidden;
             }
@@ -124,16 +123,17 @@ nav {
 
         > li:hover {
             background-color: var(--color-6);
+
             > .nav_dropdown {
                 visibility: unset;
             }
-
         }
 
         .nav_dropdown {
             border-top: 1px solid var(--color-8);
             background-color: var(--color-6);
             padding: 0 0 15px 0;
+            
             > ul {
                 list-style: none;
                 padding: 15px 0 0 0;
@@ -148,21 +148,24 @@ nav {
 
 main {
     padding: 0 15% 0 15%;
+
     > div.film {
         margin: 30px 0 30px 0;
         width: fit-content;
+
         > a {
             display: flex;
             color: var(--color-1);
             text-decoration: none;
         }
+
         img{
             width: 200px;
             height: 200px;
             margin-right: 15px;
             border: black 1px solid;
         }
-        
+
         h3 {
             margin: 5px 0 5px 0;
         }

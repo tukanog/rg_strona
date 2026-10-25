@@ -76,21 +76,21 @@
         <div class="film">
             <a href="#">
                 <img src="#" alt="" title="Okładka przykładowego filmu">
-                <label>
+                <div>
                     <p><small>Czas trwania: 369min</small></p>
                     <h3>Przykładowy tytuł filmu</h3>
                     <p>Przykładowy film z przykładową historią o przykładowym bohaterze</p>
-                </label>
+                </div>
             </a>
         </div>
         <div class="film">
             <a href="#">
                 <img src="#" alt="" title="Okładka przykładowego filmu">
-                <label>
+                <div>
                     <p><small>Czas trwania: 369min</small></p>
                     <h3>Przykładowy tytuł filmu</h3>
                     <p>Przykładowy film z przykładową historią o przykładowym bohaterze</p>
-                </label>
+                </div>
             </a>
         </div>
     </main>

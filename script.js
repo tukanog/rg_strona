@@ -45,3 +45,28 @@ CZCIONKA.onchange = function() {
     document.body.style.fontSize = CZCIONKA.value + '%'
     SPAN_CZCIONKA.innerHTML = CZCIONKA.value + '%'
 }
+
+//ukrywanie formularzy na start
+document.addEventListener("DOMContentLoaded", function() {
+    const formularze = document.querySelectorAll('.zarezerwuj');
+    formularze.forEach(function(form) {
+        form.style.display = 'none'; 
+    });
+});
+
+//otworzenie formularza
+function Rezerwacje(event, element) {
+    const formularz = element.querySelector('.zarezerwuj');
+    if (formularz) {
+        formularz.style.display = 'block';
+    }
+}
+
+//funkcja zamykajaca formularz
+function ZamknijRezerwacje(event, element) {
+    event.stopPropagation();
+    const formularz = element.closest('.zarezerwuj');
+    if (formularz) {
+        formularz.style.display = 'none';
+    }
+}

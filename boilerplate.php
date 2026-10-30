@@ -62,9 +62,9 @@
             <li><a href="rezerwacje.php">Pomoc  &#129095;</a>
                 <div class="nav_dropdown">
                     <ul>
-                        <li>Cennik</li>
-                        <li>Kontakt</li>
-                        <li>Pozostałe FAQ</li>
+                        <li><a href="pomoc.php#cennik">Cennik</a></li>
+                        <li><a href="pomoc.php#kontakt">Kontakt</a></li>
+                        <li><a href="pomoc.php#inne">Pozostałe FAQ</a></li>
                     </ul>
                 </div>
             </li>

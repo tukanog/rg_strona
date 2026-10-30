@@ -5,3 +5,13 @@ nie xd
 
 
 Z jakiegoś powodu nie działa zmiana logo na light.css
+
+Schemat działania strony:
+    Index -> Repertuar
+          -> Aktualności 
+
+    Repertuar -> Rezerwacje
+              -> Premiery -> Rezerwacje dla premier
+
+    
+    

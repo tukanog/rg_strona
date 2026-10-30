@@ -58,7 +58,7 @@
         </ul>
         <ul id="navbar">
             <li><a href="index.php">Repertuar</a></li>
-            <li><a href="index.php">Aktualności</a></li>
+            <li><a href="aktualnosci.php">Aktualności</a></li>
             <li><a href="rezerwacje.php">Pomoc  &#129095;</a>
                 <div class="nav_dropdown">
                     <ul>

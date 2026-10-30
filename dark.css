@@ -172,6 +172,23 @@ main {
             margin: 5px 0 5px 0;
         }
     } 
+
+    /* AKTUALNOSCI */
+
+    > div.news_post {
+        background-color: var(--color-6);
+        padding: 0 10px 0 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-left: 3px var(--color-8) solid ;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 15px 0 15px 0;
+        > small {
+            align-items: center;
+        }
+    }
 }
 
 footer {

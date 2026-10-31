@@ -47,13 +47,9 @@
                     </a>
                 <?php }; ?>
             </li>
+            <li>
+                <a href="panel.php" id='panel_zarzadzania'>Panel zarządzania</a>
             </li>
-            <?php 
-                if (isset($_SESSION)) { ?>
-                    <li>
-                        <a href="panel.php" id='panel_zarzadzania'>Panel zarządzania</a>
-                    </li>
-                <?php } ?>
         </ul>
         <ul id="navbar">
             <li><a href="index.php">Repertuar</a></li>

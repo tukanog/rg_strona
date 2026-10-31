@@ -24,11 +24,13 @@
             <li><a href="premiery.php">Premiery</a></li>
             <li><a href="rezerwacje.php">Rezerwacje</a></li>
             <?php 
-                if (isset($_SESSION)) { ?>
-                    <li>
-                        <a href="panel.php" id='panel_zarzadzania'>Panel zarządzania</a>
-                    </li>
-                <?php } ?>
+                if (empty($_SESSION)) {
+
+                } else { ?>
+                    <li><a href="panel.php" id='panel_zarzadzania'>Panel zarządzania</a></li>
+            <?php
+                }
+            ?>
         </ul>
     </nav>
 

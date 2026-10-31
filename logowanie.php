@@ -112,7 +112,7 @@
         </p>
     </footer>
     <?php 
-        $baza_danych->close()
+        $db->close()
     ?>
 </body>
 </html>

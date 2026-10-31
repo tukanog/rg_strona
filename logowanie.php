@@ -57,9 +57,7 @@
     <nav>
         <ul id="logbar">
             <li>
-                <a href="logowanie.php">
-                    <button>Zaloguj</button>
-                </a>
+                <a href="logowanie.php">Zaloguj</a>
             </li>
             </li>
         </ul>

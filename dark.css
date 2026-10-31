@@ -74,29 +74,14 @@ nav {
 
         > li {
             height: 100%;
-
-            > form#logowanie {
-                height: 100%;
-                width: 100%;
-            }
+            padding: 0 10px 0 10px;
         }
 
         > li:hover {
             background-color: var(--color-6);
         }
 
-        #button_login {
-            background-color: unset;
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0 10px 0 10px;
-            align-items: center;
-            border: 0;
-            font-size: x-large;
-            line-height: 1.4;
-            color: var(--color-1);
-        }
+        
     }
 
     > ul#navbar {
@@ -187,6 +172,41 @@ main {
         margin: 15px 0 15px 0;
         > small {
             align-items: center;
+        }
+    }
+
+    /* REPERTUAR */
+
+    /* 
+        31.10 - Paweł
+        Wystylować poszczególne pola na filmy
+        ustawić osobny div na godziny po prawej:
+            - nagłówek na górze "dostępne godziny"
+            - dropdown lista bez zmian
+    
+    */
+    > div.seans_wrapper {
+        background-color: var(--color-7);
+        margin: 30px 0 30px 0;
+        padding: 10px 0 10px 0;
+         h3 {text-align: center; margin-bottom: 5px;}
+        div.seans_content_wrapper {
+            display: flex;
+            > div.seans_content {
+                display: flex;
+                width: fit-content;
+                 p.seans_content_czas {
+                    margin: 5px 0 5px 0;
+                }
+                > div.seans_desc_wrapper {
+                    padding: 15px;
+                }
+            }
+            
+            img {
+                width: 260px;
+                height: 375px;
+            }
         }
     }
 }

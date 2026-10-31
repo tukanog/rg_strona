@@ -108,7 +108,9 @@
             $film_do_wstawienia=$_POST['film_do_wstawienia'];
             $opis=$_POST['opis_wstawiony'];
             $grafika=$_POST['grafika_wstawiony'];
-            $kwerenda_wstaw='INSERT INTO filmy_repertuar (nazwa_filmu, opis, grafika) values ("'.$film_do_wstawienia.'","'.$opis.'","'.$grafika.'")';
+            $gatunek=$_POST['gatunek'];
+            $czas_trwania=$_POST['czas_trwania'];
+            $kwerenda_wstaw='INSERT INTO filmy_repertuar (nazwa_filmu, opis, grafika, gatunek, czas_trwania) values ("'.$film_do_wstawienia.'","'.$opis.'","'.$grafika.'","'.$gatunek.'",'.$czas_trwania.')';
             $baza_danych->query($kwerenda_wstaw);
         }
         ?>

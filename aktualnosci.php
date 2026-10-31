@@ -78,7 +78,7 @@
             <h3>Premiera Tygodnia - Zaplanuj swój weekend z NOVA!</h3>
             <p><small>20.06.2025</small> <small>14:00</small></p>
             <div class="news_content">
-                <p>Nadszedł piątek, a wraz z nim długo wyczekiwana premiera najnowszego widowiska sci-fi tego roku! Efekty specjalne, porywająca fabuła i gwiazdorska obsada czekają na Was na naszych największych ekranach. Nie zwlekaj – najlepsze miejsca szybko znikają! Kup bilet online bez kolejki na naszej stronie internetowej. Do zobaczenia w NOVA!</p>
+                <p>Nadszedł piątek, a wraz z nim długo wyczekiwana premiera najnowszego widowiska sci-fi tego roku! Efekty specjalne, porywająca fabuła i gwiazdorska obsada czekają na Was na naszych największych ekranach. Nie zwlekaj - najlepsze miejsca szybko znikają! Kup bilet online bez kolejki na naszej stronie internetowej. Do zobaczenia w NOVA!</p>
             </div>
         </div>
         

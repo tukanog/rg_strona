@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Paź 28, 2026 at 07:32 PM
--- Wersja serwera: 10.4.32-MariaDB
--- Wersja PHP: 8.2.12
+-- Host: localhost
+-- Generation Time: Paź 31, 2026 at 04:09 PM
+-- Wersja serwera: 10.4.28-MariaDB
+-- Wersja PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -50,7 +50,8 @@ INSERT INTO `filmy_repertuar` (`id`, `nazwa_filmu`, `opis`, `czas_trwania`, `gat
 (7, 'Pulp Fiction', 'Przeplatające się historie z życia gangsterów, boksera i pary złodziejaszków w Los Angeles.', 154, 'Sensacyjny', '/pulp_fiction.jpg'),
 (8, 'Interstellar', 'Grupa astronautów podróżuje przez tunel czasoprzestrzenny w poszukiwaniu nowego domu dla ludzkości.', 169, 'Sci-Fi', '/interstellar.jpg'),
 (9, 'Władca Pierścieni: Drużyna Pierścienia', 'Hobbit Frodo wyrusza w niebezpieczną podróż, aby zniszczyć potężny pierścień zła.', 178, 'Fantasy', '/wladca_pierscieni.jpg'),
-(10, 'Zielona Mila', 'Strażnik więzienny odkrywa, że jeden ze skazanych na śmierć więźniów posiada niezwykły dar uzdrawiania.', 189, 'Dramat', '/zielona_mila.jpg');
+(10, 'Zielona Mila', 'Strażnik więzienny odkrywa, że jeden ze skazanych na śmierć więźniów posiada niezwykły dar uzdrawiania.', 189, 'Dramat', '/zielona_mila.jpg'),
+(12, 'Sraka 2', 'Sranie i rzyganie', NULL, NULL, 'sranie.jpg');
 
 -- --------------------------------------------------------
 
@@ -71,7 +72,7 @@ CREATE TABLE `godziny_seansow` (
 --
 
 INSERT INTO `godziny_seansow` (`id_seansu`, `id_filmu`, `ilosc_miejsc`, `godzina`, `dzien_seansu`) VALUES
-(1, 1, 40, '14:00:00', '2026-11-01'),
+(1, 1, -263, '14:00:00', '2026-11-01'),
 (2, 2, 60, '16:00:00', '2026-11-01'),
 (3, 3, 80, '20:00:00', '2026-11-02'),
 (4, 4, 50, '17:15:00', '2026-11-02'),
@@ -119,7 +120,10 @@ INSERT INTO `rezerwacje` (`id_rezerwacji`, `id_seansu`, `ilosc_biletow`, `imie`,
 (11, 1, 1, 'Adam', 'Nowak', 'adam@nowak.pl'),
 (12, 1, 1, 'Adam', 'Nowak', 'adam@nowak.pl'),
 (13, 1, 1, 'Adam', 'Nowak', 'adam@nowak.pl'),
-(14, 1, 1, 'Adam', 'Nowak', 'adam@nowak.pl');
+(14, 1, 1, 'Adam', 'Nowak', 'adam@nowak.pl'),
+(15, 1, 2, 'adam', 'sada', 'dase@dsa'),
+(16, 1, 1, 'adam', 'ada,m', 'dad@daes'),
+(17, 1, 300, 'adam', 'adam', 'adam@adam');
 
 -- --------------------------------------------------------
 
@@ -130,7 +134,7 @@ INSERT INTO `rezerwacje` (`id_rezerwacji`, `id_seansu`, `ilosc_biletow`, `imie`,
 CREATE TABLE `uzytkownicy` (
   `id` int(11) NOT NULL,
   `nazwa` varchar(20) NOT NULL,
-  `haslo` varchar(20) NOT NULL
+  `haslo` char(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
@@ -138,7 +142,7 @@ CREATE TABLE `uzytkownicy` (
 --
 
 INSERT INTO `uzytkownicy` (`id`, `nazwa`, `haslo`) VALUES
-(1, 'admin', 'adminNOVA');
+(1, 'admin', '7e59d5d24687ac3df2326dd25401b059cccd5c67');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -178,7 +182,7 @@ ALTER TABLE `uzytkownicy`
 -- AUTO_INCREMENT for table `filmy_repertuar`
 --
 ALTER TABLE `filmy_repertuar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `godziny_seansow`
@@ -190,13 +194,13 @@ ALTER TABLE `godziny_seansow`
 -- AUTO_INCREMENT for table `rezerwacje`
 --
 ALTER TABLE `rezerwacje`
-  MODIFY `id_rezerwacji` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_rezerwacji` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `uzytkownicy`
 --
 ALTER TABLE `uzytkownicy`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables

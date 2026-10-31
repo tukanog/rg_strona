@@ -49,15 +49,11 @@
             </li>
             </li>
             <?php 
-                if (empty($_SESSION)) {
-
-                } else { ?>
+                if (isset($_SESSION)) { ?>
                     <li>
                         <a href="panel.php" id='panel_zarzadzania'>Panel zarządzania</a>
                     </li>
-            <?php
-                }
-            ?>
+                <?php } ?>
         </ul>
         <ul id="navbar">
             <li><a href="index.php">Repertuar</a></li>

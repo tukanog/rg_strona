@@ -24,19 +24,11 @@
             <li><a href="premiery.php">Premiery</a></li>
             <li><a href="rezerwacje.php">Rezerwacje</a></li>
             <?php 
-                if(isset($_POST['nazwa_uzytkownika'])){
-                    $nazwa_uzytkownik=$_POST['nazwa_uzytkownika'];
-                    $haslo=$_POST['haslo'];
-                    $pobierz_uzytkownika='SELECT * FROM uzytkownicy WHERE nazwa LIKE "'.$nazwa_uzytkownik.'" AND haslo LIKE "'.$haslo.'"';
-                    $baza_danych= new mysqli('127.0.0.1', 'root', '', 'kino_nova');
-                    $sprawdz_uzytkownika=$baza_danych->query($pobierz_uzytkownika);
-                    if($sprawdz_uzytkownika){
-                    ?>
-                    <li><a href="panel.php" id='panel_zarzadzania'>Panel zarządzania</a></li>
-                    <?php
-                    }
-                }
-            ?>
+                if (isset($_SESSION)) { ?>
+                    <li>
+                        <a href="panel.php" id='panel_zarzadzania'>Panel zarządzania</a>
+                    </li>
+                <?php } ?>
         </ul>
     </nav>
 

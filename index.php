@@ -145,7 +145,7 @@
                         </label><br>
                         <label>
                             Ilość biletów:
-                            <input type="number" name="ile_biletow" value="1" min="1" required>
+                            <input type="number" name="ile_biletow" value="1" min="1" max="<?=$wynik_daty['ilosc_miejsc']?>" required>
                         </label><br>
                         <label>Podaj imię:
                             <input type="text" name="imie" placeholder='Imię' required>

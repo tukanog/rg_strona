@@ -65,11 +65,9 @@
     <nav>
         <ul id="logbar">
             <li>
-                <form action="repertuar.php" method="post" id='logowanie'>
-                    <input type="hidden" name="nazwa_uzytkownika" id="nazwa_uzytkownika">
-                    <input type="hidden" name="haslo" id="haslo">
-                    <button id="button_login" onclick='PobierzDane()'>Zaloguj</button>
-                </form>
+                <a href="logowanie.php">
+                <button>Zaloguj</button>
+                </a>
             </li>
             <?php 
                 if(isset($_POST['nazwa_uzytkownika'])){

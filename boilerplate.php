@@ -36,11 +36,10 @@
     <nav>
         <ul id="logbar">
             <li>
-                <form action="boilerplate.php" method="post" id='logowanie'> <!-- action do zmiany -->
-                    <input type="hidden" name="nazwa_uzytkownika" id="nazwa_uzytkownika">
-                    <input type="hidden" name="haslo" id="haslo">
-                    <button id="button_login" onclick='PobierzDane()'>Zaloguj</button>
-                </form>
+                <a href="logowanie.php">
+                    <button>Zaloguj</button>
+                </a>
+            </li>
             </li>
             <?php 
                 if(isset($_POST['nazwa_uzytkownika'])){

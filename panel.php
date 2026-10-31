@@ -112,6 +112,36 @@
             $baza_danych->query($kwerenda_wstaw);
         }
         ?>
+            <form action="" method="post">
+            <label>Dodaj seans
+                <input type="text" name="seans_do_wstawienia" placeholder='Podaj nazwę filmu dla seansu' required>
+            </label>
+            <label>
+                Dodaj godzinę seansu
+                <input type="time" name="godzina_seansu" required placeholder='Podaj godzinę seansu'>
+            </label>
+            <label>
+                Dodaj ilość miejsc na seansie
+                <input type="number" name="ilosc_miejsc" required placeholder='Podaj ilość miejsc na seansie' min='0'>
+            </label>
+            <label>
+                Dodaj datę seansu
+                <input type="date" name="dzien_wstawiony" required placeholder='Podaj datę seansu'>
+            </label>
+            <button>Dodaj seans</button>
+        </form>
+        <?php 
+        if(isset($_POST['seans_do_wstawienia'])){
+            $seans_do_wstawienia=$_POST['seans_do_wstawienia'];
+            $godzina=$_POST['godzina_seansu'];
+            $ilosc_miejsc=$_POST['ilosc_miejsc'];
+            $data=$_POST['dzien_wstawiony'];
+            $kwerenda_do_id_filmu='SELECT id FROM filmy_repertuar where nazwa_filmu="'.$seans_do_wstawienia.'"';
+            $id_filmu_seans=$baza_danych->query($kwerenda_do_id_filmu)->fetch_assoc();
+            $kwerenda_wstaw='INSERT INTO godziny_seansow (id_filmu, ilosc_miejsc, godzina, dzien_seansu) values ('.$id_filmu_seans['id'].','.$ilosc_miejsc.',"'.$godzina.'",'.$data.')';
+            $baza_danych->query($kwerenda_wstaw);
+        }
+        ?>
     </main>
 
 </html>

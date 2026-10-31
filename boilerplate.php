@@ -62,7 +62,7 @@
         <ul id="navbar">
             <li><a href="index.php">Repertuar</a></li>
             <li><a href="aktualnosci.php">Aktualności</a></li>
-            <li><a href="rezerwacje.php">Pomoc  &#129095;</a>
+            <li><a href="pomoc.php">Pomoc  &#129095;</a>
                 <div class="nav_dropdown">
                     <ul>
                         <li><a href="pomoc.php#cennik">Cennik</a></li>

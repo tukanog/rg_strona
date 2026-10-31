@@ -15,7 +15,9 @@
     ?>
     <header>
         <div id="logo">
-            <img src="assets/img/logo_white.svg" id="logo_img" alt="Logo strony">
+            <a href="index.php">
+                <img src="assets/img/logo_white.svg" id="logo_img" alt="Logo strony">
+            </a>
             <div>
                 <h1>Kino NOVA</h1>
                 <p>Twoje najlepsze doświadczenia z filmów</p>

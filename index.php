@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -65,23 +66,23 @@
     <nav>
         <ul id="logbar">
             <li>
-                <form action="repertuar.php" method="post" id='logowanie'>
-                    <input type="hidden" name="nazwa_uzytkownika" id="nazwa_uzytkownika">
-                    <input type="hidden" name="haslo" id="haslo">
-                    <button id="button_login" onclick='PobierzDane()'>Zaloguj</button>
-                </form>
+                <?php if(empty($_SESSION)) { ?>
+                <a href="logowanie.php">
+                    <button>Zaloguj</button>
+                </a>
+                <?php } else { ?> 
+                    <a href="wylogowanie.php">
+                        <button>Wyloguj</button>
+                    </a>
+                <?php }; ?>
+            </li>
             </li>
             <?php 
-                if(isset($_POST['nazwa_uzytkownika'])){
-                    $nazwa_uzytkownik = $_POST['nazwa_uzytkownika'];
-                    $haslo = $_POST['haslo'];
-                    $pobierz_uzytkownika = 'SELECT * FROM uzytkownicy WHERE nazwa LIKE "'.$nazwa_uzytkownik.'" AND haslo LIKE "'.$haslo.'"';
-                    $sprawdz_uzytkownika = $baza_danych->query($pobierz_uzytkownika);
-                    if($sprawdz_uzytkownika && $sprawdz_uzytkownika->num_rows > 0){
-                    ?>
+                if (empty($_SESSION)) {
+
+                } else { ?>
                     <li><a href="panel.php" id='panel_zarzadzania'>Panel zarządzania</a></li>
-                    <?php
-                    }
+            <?php
                 }
             ?>
         </ul>

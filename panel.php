@@ -1,3 +1,8 @@
+<?php session_start();
+    if (empty($_SESSION)) {
+        header("Location: logowanie.php");
+    } 
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -36,30 +41,24 @@
     <nav>
         <ul id="logbar">
             <li>
-                <form action="boilerplate.php" method="post" id='logowanie'> <!-- action do zmiany -->
-                    <input type="hidden" name="nazwa_uzytkownika" id="nazwa_uzytkownika">
-                    <input type="hidden" name="haslo" id="haslo">
-                    <button id="button_login" onclick='PobierzDane()'>Zaloguj</button>
-                </form>
+                <?php if(empty($_SESSION)) { ?>
+                <a href="logowanie.php">
+                    <button>Zaloguj</button>
+                </a>
+                <?php } else { ?> 
+                    <a href="wylogowanie.php">
+                        <button>Wyloguj</button>
+                    </a>
+                <?php }; ?>
             </li>
-            <?php 
-                if(isset($_POST['nazwa_uzytkownika'])){
-                    $nazwa_uzytkownik=$_POST['nazwa_uzytkownika'];
-                    $haslo=$_POST['haslo'];
-                    $pobierz_uzytkownika='SELECT * FROM uzytkownicy WHERE nazwa LIKE "'.$nazwa_uzytkownik.'" AND haslo LIKE "'.$haslo.'"';
-                    $sprawdz_uzytkownika=$baza_danych->query($pobierz_uzytkownika);
-                    if($sprawdz_uzytkownika){
-                    ?>
-                    <li><a href="panel.php" id='panel_zarzadzania'>Panel zarządzania</a></li>
-                    <?php
-                    }
-                }
-            ?>
+            <li>
+                <a href="panel.php" id='panel_zarzadzania'>Panel zarządzania</a>
+            </li>
         </ul>
         <ul id="navbar">
-            <li><a href="repertuar.php">Repertuar</a></li>
-            <li><a href="index.php">Aktualności</a></li>
-            <li><a href="rezerwacje.php">Pomoc  &#129095;</a>
+            <li><a href="index.php">Repertuar</a></li>
+            <li><a href="aktualnosci.php">Aktualności</a></li>
+            <li><a href="pomoc.php">Pomoc  &#129095;</a>
                 <div class="nav_dropdown">
                     <ul>
                         <li><a href="pomoc.php#cennik">Cennik</a></li>

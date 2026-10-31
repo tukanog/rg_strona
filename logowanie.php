@@ -90,8 +90,8 @@
     </nav>
 
     <main>
-        <p><?php if(isset($komunikat)) { echo $komunikat; }; ?></p>
-        
+        <?php if(isset($komunikat)) { echo '<p>'.$komunikat.'</p>'; }; ?>
+
         <form action="logowanie.php" method="POST">
             <label for="username">Nazwa użytkownika:</label>
             <input type="text" id="username" name="username" required>

@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php session_start();
+    if (empty($_SESSION)) {
+        header("Location: logowanie.php");
+    } ?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>

@@ -188,10 +188,11 @@ main {
     > div.seans_wrapper {
         background-color: var(--color-7);
         margin: 30px 0 30px 0;
-        padding: 10px 0 10px 0;
+        padding: 15px;
          h3 {text-align: center; margin-bottom: 5px;}
         div.seans_content_wrapper {
             display: flex;
+            justify-content: space-between;
             > div.seans_content {
                 display: flex;
                 width: fit-content;

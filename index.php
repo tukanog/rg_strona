@@ -123,15 +123,16 @@
                 </div>
             
                 <div class="rezerwacje_wrapper">
+                    <h3>Dostępne godziny:</h3>
                     <?php
                     $pobierz_seanse = 'SELECT DISTINCT godzina FROM `godziny_seansow` WHERE id_filmu = '.$film['id'];
                     $seans = $baza_danych->query($pobierz_seanse);
                     while($seans1 = $seans->fetch_assoc()){
                     ?>
                     <div onclick='Rezerwacje(event, this)'>
-                        <?= $seans1['godzina']; ?>
+                        <?= $seans1['godzina'].":"; ?>
                         <div class='zarezerwuj'>
-                            <span onclick='ZamknijRezerwacje(event, this)'  class='zamknij'>[X]</span>
+                            <span onclick='ZamknijRezerwacje(event, this)'  class='zamknij'>Zamknij</span>
                             <form method="post" onclick="event.stopPropagation()">
                                 <label>
                                     Wybierz datę:

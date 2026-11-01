@@ -129,7 +129,7 @@
                     while($seans1 = $seans->fetch_assoc()){
                     ?>
                     <div onclick='Rezerwacje(event, this)'>
-                        <?= $seans1['godzina'] ?>
+                        <?= $seans1['godzina']; ?>
                         <div class='zarezerwuj'>
                             <span onclick='ZamknijRezerwacje(event, this)'  class='zamknij'>[X]</span>
                             <form method="post" onclick="event.stopPropagation()">
@@ -147,7 +147,7 @@
                                 </label><br>
                                 <label>
                                     Ilość biletów:
-                                    <input type="number" name="ile_biletow" value="1" min="1" max="<?=$wynik_daty['ilosc_miejsc']?>" required>
+                                    <input type="number" name="ile_biletow" value="1" min="1" max="<?= $data['ilosc_miejsc'] ?>" required>
                                 </label><br>
                                 <label>Podaj imię:
                                     <input type="text" name="imie" placeholder='Imię' required>

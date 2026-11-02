@@ -81,8 +81,12 @@
         <section id="cennik">
             
         </section>
-        <section id="kontakt">sdaeasease</section>
-        <section id="inne">sdaeasease</section>
+        <section id="kontakt">
+            
+        </section>
+        <section id="inne">
+
+        </section>
     </main>
 
     <footer>

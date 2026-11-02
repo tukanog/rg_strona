@@ -42,9 +42,13 @@
         <ul id="logbar">
             <li>
                 <?php if(empty($_SESSION)) { ?>
-                <a href="logowanie.php">Zaloguj</a>
+                <a href="logowanie.php">
+                    <button>Zaloguj</button>
+                </a>
                 <?php } else { ?> 
-                    <a href="wylogowanie.php">Wyloguj</a>
+                    <a href="wylogowanie.php">
+                        <button>Wyloguj</button>
+                    </a>
                 <?php }; ?>
             </li>
             </li>
@@ -73,15 +77,153 @@
     </nav>
 
     <main>
-        <!-- TUTAJ PISAC -->
         <section id="cennik">
-            
-        </section>
-        <section id="kontakt">
-            
-        </section>
-        <section id="inne">
+            <div class="cennik-container">
 
+                <h2>Cennik biletów</h2>
+                <p class="cennik-opis">
+                    Sprawdź ceny biletów i skorzystaj z atrakcyjnych
+                    cen przy wcześniejszym zakupie!
+                </p>
+
+                <table class="tabela-cen">
+                    <thead>
+                        <tr>
+                            <th>Rodzaj biletu</th>
+                            <th>Cena podstawowa</th>
+                            <th>14 dni i więcej</th>
+                            <th>7 dni przed</th>
+                            <th>3 dni przed</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Bilet normalny</td>
+                            <td>30 zł</td>
+                            <td class="rabat">25,20 zł</td>
+                            <td class="rabat">27 zł</td>
+                            <td>30 zł</td>
+                        </tr>
+
+                        <tr>
+                            <td>Bilet ulgowy</td>
+                            <td>24 zł</td>
+                            <td class="rabat">20,16 zł</td>
+                            <td class="rabat">21,60 zł</td>
+                            <td>24 zł</td>
+                        </tr>
+
+                        <tr>
+                            <td>Dzieci do lat 6</td>
+                            <td>0 zł</td>
+                            <td>0 zł</td>
+                            <td>0 zł</td>
+                            <td>0 zł</td>
+                        </tr>
+
+                        <tr>
+                            <td>Maratony filmowe</td>
+                            <td>55 zł</td>
+                            <td class="rabat">46,20 zł</td>
+                            <td class="rabat">49,50 zł</td>
+                            <td>55 zł</td>
+                        </tr>
+
+                        <tr>
+                            <td>Grupy powyżej 30 osób</td>
+                            <td>20 zł / os.</td>
+                            <td class="rabat">16,80 zł / os.</td>
+                            <td class="rabat">18 zł / os.</td>
+                            <td>20 zł / os.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="cennik-info">
+                    <h3>Ważne informacje</h3>
+                    <ul>
+                        <li>Bilet ulgowy przysługuje uczniom i studentom za okazaniem ważnej legitymacji.</li>
+                        <li>Dzieci do lat 6 mogą wejść bezpłatnie pod opieką osoby dorosłej.</li>
+                        <li>Cena grupowa obowiązuje przy zakupie minimum 31 biletów.</li>
+                        <li>Zakup 14 dni lub więcej przed seansem oznacza 84% ceny podstawowej.</li>
+                        <li>Zakup 7 dni przed seansem oznacza 90% ceny podstawowej.</li>
+                        <li>Zakup 3 dni przed seansem oznacza 100% ceny podstawowej.</li>
+                        <li>Rabaty nie łączą się z innymi promocjami.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="kontakt">
+            <div class="kontakt-container">
+                <h2>Kontakt</h2>
+                <p>Masz pytania? Skontaktuj się z nami!</p>
+
+                <div class="kontakt-item">
+                    <h3>Adres e-mail</h3>
+                    <a href="mailto:kinocezarego@kirka.epsz.pl">
+                        kinocezarego@kirka.epsz.pl
+                    </a>
+                </div>
+
+                <div class="kontakt-item">
+                    <h3>Numer telefonu</h3>
+                    <a href="tel:+48676921157">
+                        +48 676 921 157
+                    </a>
+                </div>
+
+                <div class="kontakt-item">
+                    <h3>Nasza lokalizacja</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4494.0027508985995!2d19.8457817!3d51.3627625!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47198d24a97cbf45%3A0xf336da6e3d8e4feb!2zTGXFm25hIDY3LCA5Ny0zMzAgU3VsZWrDs3c!5e1!3m2!1spl!2spl!4v1793653239328!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="inne">
+            <div class="problem-form">
+                <h2>Zgłoś problem</h2>
+                <p>Wypełnij formularz, aby zgłosić problem związany z zakupem biletu do kina.</p>
+
+                <form action="#" method="post">
+
+                    <label for="problem">Rodzaj problemu:</label>
+                    <select id="problem" name="problem" required>
+                        <option value="">Wybierz rodzaj problemu</option>
+                        <option value="zwrot">Zwrot biletu</option>
+                        <option value="bledny-zakup">Błędny zakup</option>
+                        <option value="platnosc">Problem z płatnością</option>
+                        <option value="brak-biletu">Nie otrzymałem biletu na e-mail</option>
+                        <option value="bledne-dane">Błędne dane na bilecie</option>
+                        <option value="kod-qr">Nieprawidłowy kod QR</option>
+                        <option value="podwojny-zakup">Podwójny zakup biletu</option>
+                        <option value="rezerwacja">Problem z rezerwacją miejsc</option>
+                        <option value="inny">Inny problem</option>
+                    </select>
+
+                    <label for="wiek">Wiek:</label>
+                    <input type="number" id="wiek" name="wiek"
+                        min="1" max="120" placeholder="Podaj swój wiek" required>
+
+                    <label for="numer-biletu">Numer biletu:</label>
+                    <input type="text" id="numer-biletu" name="numer-biletu"
+                        placeholder="Wpisz numer biletu" required>
+
+                    <label for="email">Adres e-mail:</label>
+                    <input type="email" id="email" name="email"
+                        placeholder="np. przyklad@email.com" required>
+
+                    <label for="opis">Krótki opis problemu:</label>
+                    <textarea id="opis" name="opis" rows="5"
+                            placeholder="Opisz krótko, czego dotyczy problem..."
+                            required></textarea>
+
+                    <button type="submit">Wyślij zgłoszenie</button>
+
+                </form>
+            </div>
         </section>
     </main>
 

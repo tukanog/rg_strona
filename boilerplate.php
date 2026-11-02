@@ -42,13 +42,9 @@
         <ul id="logbar">
             <li>
                 <?php if(empty($_SESSION)) { ?>
-                <a href="logowanie.php">
-                    <button>Zaloguj</button>
-                </a>
+                <a href="logowanie.php">Zaloguj</a>
                 <?php } else { ?> 
-                    <a href="wylogowanie.php">
-                        <button>Wyloguj</button>
-                    </a>
+                    <a href="wylogowanie.php">Wyloguj</a>
                 <?php }; ?>
             </li>
             </li>

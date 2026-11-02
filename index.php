@@ -69,13 +69,9 @@
         <ul id="logbar">
             <li>
                 <?php if(empty($_SESSION)) { ?>
-                <a href="logowanie.php">
-                    <button>Zaloguj</button>
-                </a>
+                <a href="logowanie.php">Zaloguj</a>
                 <?php } else { ?> 
-                    <a href="wylogowanie.php">
-                        <button>Wyloguj</button>
-                    </a>
+                    <a href="wylogowanie.php">Wyloguj</a>
                 <?php }; ?>
             </li>
             </li>
@@ -111,14 +107,20 @@
 
         while($film = $wszystkie_filmy->fetch_assoc()){
         ?>
-        <div>
-            <img src="./assets/img<?=$film['grafika']?>" alt="<?=$film['nazwa_filmu']?>">
-            <h3><?=$film['nazwa_filmu']?></h3>
-            <p>
-                <small>Czas trwania: <?=$film['czas_trwania']?> min.</small><br>
-                <small>Gatunek: <?=$film['gatunek']?></small>
-            </p>
-            <p><?=$film['opis']?></p>
+        <div class="seans_wrapper">
+            <div class="seans_content_wrapper">
+            
+                <div class="seans_content">
+                    <img src="./assets/img<?=$film['grafika']?>" alt="<?=$film['nazwa_filmu']?>">
+                    <div class="seans_desc_wrapper">
+                         <h3><?=$film['nazwa_filmu']?></h3>
+                        <p class="seans_content_czas">
+                            <small>Czas trwania: <?=$film['czas_trwania']?> min.</small><br>
+                            <small>Gatunek: <?=$film['gatunek']?></small>
+                        </p>
+                        <p><?=$film['opis']?></p>
+                    </div>
+                </div>
             
             <?php 
             $pobierz_seanse = 'SELECT DISTINCT godzina FROM `godziny_seansow` WHERE id_filmu = '.$film['id'];
@@ -145,7 +147,7 @@
                         </label><br>
                         <label>
                             Ilość biletów:
-                            <input type="number" name="ile_biletow" value="1" min="1" max="<?= $data['ilosc_miejsc']?>" required>
+                            <input type="number" name="ile_biletow" value="1" min="1" required>
                         </label><br>
                         <label>Podaj imię:
                             <input type="text" name="imie" placeholder='Imię' required>

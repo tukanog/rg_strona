@@ -44,13 +44,9 @@
         <ul id="logbar">
             <li>
                 <?php if(empty($_SESSION)) { ?>
-                <a href="logowanie.php">
-                    <button>Zaloguj</button>
-                </a>
+                <a href="logowanie.php">Zaloguj</a>
                 <?php } else { ?> 
-                    <a href="wylogowanie.php">
-                        <button>Wyloguj</button>
-                    </a>
+                    <a href="wylogowanie.php">Wyloguj</a>
                 <?php }; ?>
             </li>
             <li>
@@ -100,6 +96,14 @@
             <label>
                 Dodaj ścieżkę do grafiki filmu
                 <input type="text" name="grafika_wstawiony" required placeholder='Podaj ścieżkę w formacie: /grafika.png'>
+            </label>
+            <label>
+                Dodaj czas trawnia filmu w minutach
+                <input type="number" name="czas_trwania" required placeholder='Podaj czas trwania filmu' min='1'>
+            </label>
+            <label>
+                Dodaj gatunek filmu
+                <input type="text" name="gatunek_filmu" required placeholder='Podaj gatunek'>
             </label>
             <button>Dodaj film</button>
         </form>

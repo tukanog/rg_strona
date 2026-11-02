@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Paź 31, 2026 at 04:09 PM
--- Wersja serwera: 10.4.28-MariaDB
--- Wersja PHP: 8.2.4
+-- Host: 127.0.0.1
+-- Generation Time: Paź 31, 2026 at 06:38 PM
+-- Wersja serwera: 10.4.32-MariaDB
+-- Wersja PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -65,14 +65,14 @@ CREATE TABLE `godziny_seansow` (
   `ilosc_miejsc` int(11) NOT NULL DEFAULT 50,
   `godzina` time NOT NULL,
   `dzien_seansu` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+) ;
 
 --
 -- Dumping data for table `godziny_seansow`
 --
 
 INSERT INTO `godziny_seansow` (`id_seansu`, `id_filmu`, `ilosc_miejsc`, `godzina`, `dzien_seansu`) VALUES
-(1, 1, -263, '14:00:00', '2026-11-01'),
+(1, 1, 50, '14:00:00', '2026-11-01'),
 (2, 2, 60, '16:00:00', '2026-11-01'),
 (3, 3, 80, '20:00:00', '2026-11-02'),
 (4, 4, 50, '17:15:00', '2026-11-02'),
@@ -85,7 +85,8 @@ INSERT INTO `godziny_seansow` (`id_seansu`, `id_filmu`, `ilosc_miejsc`, `godzina
 (11, 2, 50, '18:00:00', '2026-11-01'),
 (12, 2, 50, '18:00:00', '2026-11-02'),
 (13, 2, 50, '18:00:00', '2026-11-03'),
-(14, 2, 50, '18:00:00', '2026-11-04');
+(14, 2, 50, '18:00:00', '2026-11-04'),
+(15, 1, 4, '19:35:00', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -188,7 +189,7 @@ ALTER TABLE `filmy_repertuar`
 -- AUTO_INCREMENT for table `godziny_seansow`
 --
 ALTER TABLE `godziny_seansow`
-  MODIFY `id_seansu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_seansu` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `rezerwacje`

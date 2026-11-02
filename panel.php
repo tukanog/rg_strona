@@ -118,7 +118,7 @@
             $baza_danych->query($kwerenda_wstaw);
         }
         ?>
-        <form action="" method="post">
+            <form action="" method="post">
             <label>Dodaj seans
                 <input type="text" name="seans_do_wstawienia" placeholder='Podaj nazwę filmu dla seansu' required>
             </label>

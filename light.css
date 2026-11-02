@@ -100,7 +100,7 @@ nav {
             height: 100%;
             width: 100%;
             text-align: center;
-            justify-content: center;
+            justify-content: space-evenly;
             flex: 1;
         }
 
@@ -112,7 +112,7 @@ nav {
             }
             
         }
-        
+
         > li:active {
             background-color: var(--color-8);
         }
@@ -246,6 +246,71 @@ main {
                 span.zamknij:hover {
                     background-color: var(--color-5);
                 }
+            }
+        }
+    }
+
+    /* POMOC */
+
+    section#kontakt , section#cennik , section#inne {
+        background-image: linear-gradient(to bottom right, var(--color-6), var(--color-7));
+        border-radius: 1rem;
+        a {color: var(--color-1);}
+        div.pomoc_wrapper {
+            padding: 25px;
+            margin: 30px 0 30px 0;
+            > form {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                > input, > select, > textarea {
+                    width: 30%;
+                    resize: none;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    padding: 2px;
+                }
+                > button {
+                    width: fit-content;
+                }
+            }
+
+            > table, th, td, tr {
+                border: 3px solid var(--color-8);
+                border-radius: unset;
+                border-collapse: collapse;
+                
+                th, td {
+                    padding: 5px;
+                }
+                
+            }
+            > table {
+                background-color: var(--color-7);
+                thead, tr:nth-child(even) {
+                    background-color: var(--color-5);
+                }
+            }
+
+            > div.cennik_info {
+                > ul {
+                    list-style: "▸";
+                }
+            }
+
+        }
+        div#kontakt_wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            
+            > div.kontakt_item {
+                width: 50%;
+            }
+            iframe {
+                width: 600px;
+                height: 450px;
+                border:3px solid var(--color-8);
+                border-radius: 1rem;
             }
         }
     }

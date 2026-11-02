@@ -43,7 +43,7 @@
             <li>
                 <?php if(empty($_SESSION)) { ?>
                 <a href="logowanie.php">
-                    <button>Zaloguj</button>
+                    Zaloguj
                 </a>
                 <?php } else { ?> 
                     <a href="wylogowanie.php">
@@ -78,15 +78,15 @@
 
     <main>
         <section id="cennik">
-            <div class="cennik-container">
+            <div class="pomoc_wrapper">
 
                 <h2>Cennik biletów</h2>
-                <p class="cennik-opis">
+                <p class="cennik_desc">
                     Sprawdź ceny biletów i skorzystaj z atrakcyjnych
                     cen przy wcześniejszym zakupie!
                 </p>
 
-                <table class="tabela-cen">
+                <table class="cennik_table">
                     <thead>
                         <tr>
                             <th>Rodzaj biletu</th>
@@ -140,7 +140,7 @@
                     </tbody>
                 </table>
 
-                <div class="cennik-info">
+                <div class="cennik_info">
                     <h3>Ważne informacje</h3>
                     <ul>
                         <li>Bilet ulgowy przysługuje uczniom i studentom za okazaniem ważnej legitymacji.</li>
@@ -157,33 +157,31 @@
         </section>
 
         <section id="kontakt">
-            <div class="kontakt-container">
-                <h2>Kontakt</h2>
-                <p>Masz pytania? Skontaktuj się z nami!</p>
+            <div class="pomoc_wrapper" id="kontakt_wrapper">
 
-                <div class="kontakt-item">
+                <div class="kontakt_item">  
+                    <h2>Kontakt</h2>
+                    <p>Masz pytania? Skontaktuj się z nami!</p>
                     <h3>Adres e-mail</h3>
-                    <a href="mailto:kinocezarego@kirka.epsz.pl">
-                        kinocezarego@kirka.epsz.pl
+                    <a href="mailto:kino.nova@nova.kontakt.pl" target="_blank">
+                        kino.nova@nova.kontakt.pl
                     </a>
-                </div>
 
-                <div class="kontakt-item">
                     <h3>Numer telefonu</h3>
-                    <a href="tel:+48676921157">
-                        +48 676 921 157
+                    <a href="tel:+38111111111" target="_blank">
+                        +48 111 111 111
                     </a>
                 </div>
 
-                <div class="kontakt-item">
+                <div class="kontakt_item">
                     <h3>Nasza lokalizacja</h3>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4494.0027508985995!2d19.8457817!3d51.3627625!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47198d24a97cbf45%3A0xf336da6e3d8e4feb!2zTGXFm25hIDY3LCA5Ny0zMzAgU3VsZWrDs3c!5e1!3m2!1spl!2spl!4v1793653239328!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4494.0027508985995!2d19.8457817!3d51.3627625!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47198d24a97cbf45%3A0xf336da6e3d8e4feb!2zTGXFm25hIDY3LCA5Ny0zMzAgU3VsZWrDs3c!5e1!3m2!1spl!2spl!4v1793653239328!5m2!1spl!2spl" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
             </div>
         </section>
 
         <section id="inne">
-            <div class="problem-form">
+            <div class="pomoc_wrapper">
                 <h2>Zgłoś problem</h2>
                 <p>Wypełnij formularz, aby zgłosić problem związany z zakupem biletu do kina.</p>
 

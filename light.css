@@ -74,29 +74,14 @@ nav {
 
         > li {
             height: 100%;
-
-            > form#logowanie {
-                height: 100%;
-                width: 100%;
-            }
+            padding: 0 10px 0 10px;
         }
 
         > li:hover {
             background-color: var(--color-6);
         }
 
-        #button_login {
-            background-color: unset;
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0 10px 0 10px;
-            align-items: center;
-            border: 0;
-            font-size: x-large;
-            line-height: 1.4;
-            color: var(--color-1);
-        }
+        
     }
 
     > ul#navbar {
@@ -172,6 +157,83 @@ main {
             margin: 5px 0 5px 0;
         }
     } 
+
+    /* AKTUALNOSCI */
+
+    > div.news_post {
+        background-color: var(--color-6);
+        padding: 0 10px 0 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-left: 3px var(--color-8) solid ;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 15px 0 15px 0;
+        > small {
+            align-items: center;
+        }
+    }
+
+    /* REPERTUAR */
+
+    > div.seans_wrapper {
+        background-image: linear-gradient(to bottom right, var(--color-6), var(--color-7));
+        margin: 30px 0 30px 0;
+        padding: 15px;
+        border-radius: 1rem;
+        h3 { margin-bottom: 5px;}
+        div.seans_content_wrapper {
+            display: flex;
+            justify-content: space-between;
+            > div.seans_content {
+                display: flex;
+                width: 75%;
+                 p.seans_content_czas {
+                    margin: 5px 0 5px 0;
+                }
+                > div.seans_desc_wrapper {
+                    padding: 15px;
+                }
+            }
+            
+            img {
+                width: 260px;
+                height: 375px;
+                border-radius: 1rem;
+            }
+            
+            > div.rezerwacje_wrapper {
+                padding: 5px 15px 5px 15px;
+                width: 25%;
+                background-image: linear-gradient(to bottom right, var(--color-7),var(--color-8));
+                border-radius: 1rem;
+                user-select: none;
+                
+                div.zarezerwuj {
+                    z-index: 999;
+                    position: absolute;
+                    background-color: var(--color-8);
+                    padding: 10px;
+                    border-radius: 0.5rem;
+                    
+                    > form {
+                        padding: 5px;
+                    }
+                }
+
+                span.zamknij {
+                    background-color: var(--color-7);
+                    border: 1px solid var(--color-7);
+                    padding: 5px;
+                    border-radius: 0.5rem;
+                }
+                span.zamknij:hover {
+                    background-color: var(--color-5);
+                }
+            }
+        }
+    }
 }
 
 footer {

@@ -122,47 +122,50 @@
                     </div>
                 </div>
             
-            <?php 
-            $pobierz_seanse = 'SELECT DISTINCT godzina FROM `godziny_seansow` WHERE id_filmu = '.$film['id'];
-            $seans = $baza_danych->query($pobierz_seanse); 
-            while($seans1 = $seans->fetch_assoc()){
-            ?>
-            <div onclick='Rezerwacje(event, this)' >
-                <?= $seans1['godzina'] ?>
-                <div class='zarezerwuj'>
-                    <span onclick='ZamknijRezerwacje(event, this)'  class='zamknij'>[X]</span>
-                    <form method="post" onclick="event.stopPropagation()">            
-                        <label>
-                            Wybierz datę: 
-                            <select name="id_seansu" required>
-                                <?php 
-                                $pobierz_daty = "SELECT id_seansu, dzien_seansu FROM `godziny_seansow` WHERE id_filmu = " . $film['id'] . " AND godzina = '" . $seans1['godzina'] . "'";
-                                $wynik_daty = $baza_danych->query($pobierz_daty);
-                                
-                                while($data = $wynik_daty->fetch_assoc()){
-                                ?>
-                                    <option value="<?= $data['id_seansu'] ?>"><?= $data['dzien_seansu'] ?></option>
-                                <?php } ?>
-                            </select>
-                        </label><br>
-                        <label>
-                            Ilość biletów:
-                            <input type="number" name="ile_biletow" value="1" min="1" required>
-                        </label><br>
-                        <label>Podaj imię:
-                            <input type="text" name="imie" placeholder='Imię' required>
-                        </label><br>
-                        <label>Podaj nazwisko:
-                            <input type="text" name="nazwisko" placeholder='Nazwisko' required>
-                        </label><br>
-                        <label>Podaj e-mail:
-                            <input type="email" name="email" placeholder='Adres E-mail' required>
-                        </label><br>
-                        <button type="submit" name="zapisz_rezerwacje">Zarezerwuj</button>
-                    </form> 
+                <div class="rezerwacje_wrapper">
+                    <h3>Dostępne godziny:</h3>
+                    <?php
+                    $pobierz_seanse = 'SELECT DISTINCT LEFT(`godzina`, 5) AS godzina FROM `godziny_seansow` WHERE id_filmu = '.$film['id'];
+                    $seans = $baza_danych->query($pobierz_seanse);
+                    while($seans1 = $seans->fetch_assoc()){
+                    ?>
+                    <div onclick='Rezerwacje(event, this)'>
+                        <?= $seans1['godzina']; ?>
+                        <div class='zarezerwuj'>
+                            <span onclick='ZamknijRezerwacje(event, this)'  class='zamknij'>Zamknij</span>
+                            <form method="post" onclick="event.stopPropagation()">
+                                <label>
+                                    Wybierz datę:
+                                    <select name="id_seansu" required>
+                                        <?php
+                                        $pobierz_daty = "SELECT id_seansu, dzien_seansu FROM `godziny_seansow` WHERE id_filmu = " . $film['id'] . " AND godzina = '" . $seans1['godzina'] . "'";
+                                        $wynik_daty = $baza_danych->query($pobierz_daty);
+                                        while($data = $wynik_daty->fetch_assoc()){
+                                        ?>
+                                            <option value="<?= $data['id_seansu'] ?>"><?= $data['dzien_seansu'] ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </label><br>
+                                <label>
+                                    Ilość biletów:
+                                    <input type="number" name="ile_biletow" value="1" min="1" max="<?= $data['ilosc_miejsc'] ?>" required>
+                                </label><br>
+                                <label>Podaj imię:
+                                    <input type="text" name="imie" placeholder='Imię' required>
+                                </label><br>
+                                <label>Podaj nazwisko:
+                                    <input type="text" name="nazwisko" placeholder='Nazwisko' required>
+                                </label><br>
+                                <label>Podaj e-mail:
+                                    <input type="email" name="email" placeholder='Adres E-mail' required>
+                                </label><br>
+                                <button type="submit" name="zapisz_rezerwacje">Zarezerwuj</button>
+                            </form>
+                        </div>
+                    </div>
+                    <?php } ?>
                 </div>
             </div>
-            <?php } ?>
         </div>
         <?php } ?>
     </main>

@@ -130,7 +130,7 @@
                     while($seans1 = $seans->fetch_assoc()){
                     ?>
                     <div onclick='Rezerwacje(event, this)'>
-                        <?= $seans1['godzina'].":"; ?>
+                        <?= $seans1['godzina']; ?>
                         <div class='zarezerwuj'>
                             <span onclick='ZamknijRezerwacje(event, this)'  class='zamknij'>Zamknij</span>
                             <form method="post" onclick="event.stopPropagation()">

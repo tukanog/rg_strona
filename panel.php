@@ -68,16 +68,18 @@
         </ul>
     </nav>
 
-    <main>
+    <main id="panel_wrapper">
 
-        <form action="panel.php" method="post">
-            <label>Usuń film z repertuaru
-                <input type="text" name="film_do_usuniecia" required placeholder='Podaj nazwę filmu'>
-            </label>
-            <button>
-                Usuń film
-            </button>
-        </form>
+        <div class="pomoc_wrapper">
+            <form action="panel.php" method="post">
+                <label>Usuń film z repertuaru
+                    <input type="text" name="film_do_usuniecia" required placeholder='Podaj nazwę filmu'>
+                </label>
+                <button>
+                    Usuń film
+                </button>
+            </form>
+        </div>
         <?php 
         if(isset($_POST['film_do_usuniecia'])){
             $film_do_usuniecia=$_POST['film_do_usuniecia'];
@@ -85,28 +87,30 @@
             $baza_danych->query($kwerenda_usun);
         }
         ?>
-        <form action="" method="post">
-            <label>Dodaj film do repertuaru
-                <input type="text" name="film_do_wstawienia" placeholder='Podaj nazwę filmu' required>
-            </label>
-            <label>
-                Dodaj opis filmu
-                <input type="text" name="opis_wstawiony" required placeholder='Podaj opis filmu'>
-            </label>
-            <label>
-                Dodaj ścieżkę do grafiki filmu
-                <input type="text" name="grafika_wstawiony" required placeholder='Podaj ścieżkę w formacie: /grafika.png'>
-            </label>
-            <label>
-                Dodaj czas trawnia filmu w minutach
-                <input type="number" name="czas_trwania" required placeholder='Podaj czas trwania filmu' min='1'>
-            </label>
-            <label>
-                Dodaj gatunek filmu
-                <input type="text" name="gatunek_filmu" required placeholder='Podaj gatunek'>
-            </label>
-            <button>Dodaj film</button>
-        </form>
+        <div class="pomoc_wrapper">
+            <form action="" method="post">
+                <label>Dodaj film do repertuaru
+                    <input type="text" name="film_do_wstawienia" placeholder='Podaj nazwę filmu' required>
+                </label>
+                <label>
+                    Dodaj opis filmu
+                    <input type="text" name="opis_wstawiony" required placeholder='Podaj opis filmu'>
+                </label>
+                <label>
+                    Dodaj ścieżkę do grafiki filmu
+                    <input type="text" name="grafika_wstawiony" required placeholder='Podaj ścieżkę w formacie: /grafika.png'>
+                </label>
+                <label>
+                    Dodaj czas trawnia filmu w minutach
+                    <input type="number" name="czas_trwania" required placeholder='Podaj czas trwania filmu' min='1'>
+                </label>
+                <label>
+                    Dodaj gatunek filmu
+                    <input type="text" name="gatunek_filmu" required placeholder='Podaj gatunek'>
+                </label>
+                <button>Dodaj film</button>
+            </form>
+        </div>
         <?php 
         if(isset($_POST['film_do_wstawienia'])){
             $film_do_wstawienia=$_POST['film_do_wstawienia'];
@@ -118,24 +122,26 @@
             $baza_danych->query($kwerenda_wstaw);
         }
         ?>
-            <form action="" method="post">
-            <label>Dodaj seans
-                <input type="text" name="seans_do_wstawienia" placeholder='Podaj nazwę filmu dla seansu' required>
-            </label>
-            <label>
-                Dodaj godzinę seansu
-                <input type="time" name="godzina_seansu" required placeholder='Podaj godzinę seansu'>
-            </label>
-            <label>
-                Dodaj ilość miejsc na seansie
-                <input type="number" name="ilosc_miejsc" required placeholder='Podaj ilość miejsc na seansie' min='0'>
-            </label>
-            <label>
-                Dodaj datę seansu
-                <input type="date" name="dzien_wstawiony" required placeholder='Podaj datę seansu'>
-            </label>
-            <button>Dodaj seans</button>
-        </form>
+            <div class="pomoc_wrapper">
+                <form action="" method="post">
+                <label>Dodaj seans
+                    <input type="text" name="seans_do_wstawienia" placeholder='Podaj nazwę filmu dla seansu' required>
+                </label>
+                <label>
+                    Dodaj godzinę seansu
+                    <input type="time" name="godzina_seansu" required placeholder='Podaj godzinę seansu'>
+                </label>
+                <label>
+                    Dodaj ilość miejsc na seansie
+                    <input type="number" name="ilosc_miejsc" required placeholder='Podaj ilość miejsc na seansie' min='0'>
+                </label>
+                <label>
+                    Dodaj datę seansu
+                    <input type="date" name="dzien_wstawiony" required placeholder='Podaj datę seansu'>
+                </label>
+                    <button>Dodaj seans</button>
+                </form>
+            </div>
         <?php 
         if(isset($_POST['seans_do_wstawienia'])){
             $seans_do_wstawienia=$_POST['seans_do_wstawienia'];
@@ -148,7 +154,7 @@
             $baza_danych->query($kwerenda_wstaw);
         }
         ?>
-    </main>
+</main>
 
 </html>
 
